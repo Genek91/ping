@@ -12,8 +12,7 @@ def ping(url: str = URL):
     while True:
         process = subprocess.Popen(
             f'ping {url}',
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE
+            stdout=subprocess.PIPE
         )
 
         for char in '|/-\\' * 8:
